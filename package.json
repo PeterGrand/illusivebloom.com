@@ -1,0 +1,26 @@
+{
+  "name": "illusive-bloom-website",
+  "version": "1.0.0",
+  "description": "Website for Illusive Bloom natural perfumery",
+  "scripts": {
+    "dev": "concurrently \"npm run watch:css\" \"npm run serve\"",
+    "build": "npm run build:css && npx @11ty/eleventy",
+    "build:css": "tailwindcss -i src/assets/css/style.css -o src/_site/assets/css/style.css --minify",
+    "watch:css": "tailwindcss -i src/assets/css/style.css -o src/_site/assets/css/style.css --watch",
+    "serve": "npx @11ty/eleventy --serve",
+    "clean": "rm -rf src/_site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "tailwindcss": "^3.4.0",
+    "concurrently": "^8.2.0"
+  },
+  "keywords": [
+    "perfume",
+    "natural",
+    "eleventy",
+    "tailwind"
+  ],
+  "author": "Illusive Bloom",
+  "license": "ISC"
+}
