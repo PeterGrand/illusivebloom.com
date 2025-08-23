@@ -3,6 +3,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/images");
   eleventyConfig.addPassthroughCopy("src/assets/css");
   eleventyConfig.addPassthroughCopy("src/assets/js");
+  eleventyConfig.addPassthroughCopy("src/assets/favicon.ico");
 
   // Watch for changes in CSS files
   eleventyConfig.addWatchTarget("src/assets/css/");
@@ -21,6 +22,7 @@ module.exports = function(eleventyConfig) {
       data: "_data",
       output: "_site"
     },
+    pathPrefix: "/illusivebloom.com/",
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",

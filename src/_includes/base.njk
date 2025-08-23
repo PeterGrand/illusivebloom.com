@@ -5,21 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% if title %}{{ title }} | {% endif %}Illusive Bloom - Natural Perfumery</title>
     <meta name="description" content="{{ description or 'Handcrafted natural perfumes from the finest botanical ingredients' }}">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="{{ '/assets/favicon.ico' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
 </head>
 <body class="min-h-screen bg-white">
     <header class="bg-white border-b border-sage-200">
         <div class="container mx-auto px-4 py-6">
             <div class="flex items-center justify-between">
                 <div class="flex items-center space-x-4">
-                    <img src="/assets/images/illusive-bloom-logo-760x468.jpg" alt="Illusive Bloom" class="h-12 w-auto">
+                    <img src="{{ '/assets/images/illusive-bloom-logo-760x468.jpg' | url }}" alt="Illusive Bloom" class="h-12 w-auto">
                     <h1 class="text-2xl font-serif font-bold text-sage-800">Illusive Bloom</h1>
                 </div>
                 <nav>
                     <ul class="flex space-x-6">
-                        <li><a href="/" class="text-sage-700 hover:text-sage-900 font-medium">Home</a></li>
-                        <li><a href="/about" class="text-sage-700 hover:text-sage-900 font-medium">About</a></li>
-                        <li><a href="/contact" class="text-sage-700 hover:text-sage-900 font-medium">Contact</a></li>
+                        <li><a href="{{ '/' | url }}" class="text-sage-700 hover:text-sage-900 font-medium">Home</a></li>
+                        <li><a href="{{ '/about' | url }}" class="text-sage-700 hover:text-sage-900 font-medium">About</a></li>
+                        <li><a href="{{ '/contact' | url }}" class="text-sage-700 hover:text-sage-900 font-medium">Contact</a></li>
                     </ul>
                 </nav>
             </div>
@@ -40,8 +41,8 @@
                 <div>
                     <h4 class="font-serif font-bold mb-4">Quick Links</h4>
                     <ul class="space-y-2 text-sage-300">
-                        <li><a href="/about" class="hover:text-white">About Shannon</a></li>
-                        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="{{ '/about' | url }}" class="hover:text-white">About Shannon</a></li>
+                        <li><a href="{{ '/contact' | url }}" class="hover:text-white">Contact</a></li>
                     </ul>
                 </div>
                 <div>
