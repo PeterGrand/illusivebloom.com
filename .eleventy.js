@@ -1,9 +1,8 @@
 module.exports = function(eleventyConfig) {
   // Copy assets to output directory
   eleventyConfig.addPassthroughCopy("src/assets/images");
-  eleventyConfig.addPassthroughCopy("src/assets/css");
   eleventyConfig.addPassthroughCopy("src/assets/js");
-  eleventyConfig.addPassthroughCopy("src/assets/favicon.ico");
+  // Note: CSS is compiled by Tailwind, don't copy raw CSS files
 
   // Watch for changes in CSS files
   eleventyConfig.addWatchTarget("src/assets/css/");
@@ -22,7 +21,6 @@ module.exports = function(eleventyConfig) {
       data: "_data",
       output: "_site"
     },
-    pathPrefix: "/illusivebloom.com/",
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
