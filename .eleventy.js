@@ -19,7 +19,7 @@ module.exports = function(eleventyConfig) {
       input: "src",
       includes: "_includes",
       data: "_data",
-      output: "src/_site"
+      output: "_site"
     },
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",

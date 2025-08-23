@@ -4,11 +4,11 @@
   "description": "Website for Illusive Bloom natural perfumery",
   "scripts": {
     "dev": "concurrently \"npm run watch:css\" \"npm run serve\"",
-    "build": "npm run build:css && npx @11ty/eleventy",
-    "build:css": "tailwindcss -i src/assets/css/style.css -o src/_site/assets/css/style.css --minify",
-    "watch:css": "tailwindcss -i src/assets/css/style.css -o src/_site/assets/css/style.css --watch",
+    "build": "npm run clean && npm run build:css && npx @11ty/eleventy",
+    "build:css": "tailwindcss -i src/assets/css/style.css -o _site/assets/css/style.css --minify",
+    "watch:css": "tailwindcss -i src/assets/css/style.css -o _site/assets/css/style.css --watch",
     "serve": "npx @11ty/eleventy --serve",
-    "clean": "rm -rf src/_site"
+    "clean": "rm -rf _site"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
